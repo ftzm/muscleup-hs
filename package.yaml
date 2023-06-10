@@ -1,0 +1,100 @@
+name: muscleup
+version: 0.0.0.1
+
+spec-version: 0.35.0
+verbatim:
+  cabal-version: 2.4
+
+language: GHC2021
+
+default-extensions:
+  - TemplateHaskell
+  - OverloadedStrings
+  - OverloadedRecordDot
+  - OverloadedLabels
+  - DuplicateRecordFields
+  - LambdaCase
+  - DerivingVia
+  - ImportQualifiedPost
+
+ghc-options:
+  - -Wunused-imports
+  - -Wall
+  - -Wmissing-export-lists
+  - -Wmissing-home-modules
+  - -Widentities
+  - -Wpartial-fields
+  - -Wcpp-undef
+  - -Wno-orphans
+  - -fprint-potential-instances
+  - -threaded
+
+dependencies:
+  - name: base
+    version: ">=4.15"
+    mixin:
+      - hiding (Prelude)
+  - name: relude
+    version: "^>= 1.1.0.0"
+    mixin:
+      - (Relude as Prelude)
+  - aeson
+  - annotated-exception
+  - bytestring
+  - cassava
+  - containers
+  - envparse
+  - exceptions
+  - generic-optics
+  - http-client
+  - http-media
+  - http-types
+  - katip
+  - mtl
+  - newtype-generics
+  - optics
+  - refined >= 0.7
+  - resourcet
+  - text
+  - servant
+  - servant-client
+  - servant-server >=0.4.7.0
+  - QuickCheck
+  - quickcheck-instances
+  - vector
+  - wai
+  - warp
+  - some
+  - attoparsec
+  - deepseq
+  - generic-random
+
+library:
+  source-dirs: src
+  language: GHC2021
+
+executables:
+  muscleup:
+    main: "Main.hs"
+    source-dirs: app
+    dependencies:
+      - muscleup
+
+# tests:
+#   test:
+#     main: "Driver.hs"
+#     source-dirs: test
+#     dependencies:
+#       - muscleup
+#       - hspec
+#       - hspec-contrib
+#       - hspec-core
+#       - hspec-wai
+#       - HUnit
+#       - tasty
+#       - tasty-discover
+#       - tasty-hspec
+#       - tasty-hunit
+#       - tasty-quickcheck
+#       - quickcheck-instances
+#       - QuickCheck

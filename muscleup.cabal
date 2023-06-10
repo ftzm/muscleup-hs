@@ -1,0 +1,103 @@
+cabal-version: 2.4
+
+-- This file has been generated from package.yaml by hpack version 0.34.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           muscleup
+version:        0.0.0.1
+build-type:     Simple
+
+library
+  exposed-modules:
+      Muscleup
+  other-modules:
+      Paths_muscleup
+  hs-source-dirs:
+      src
+  default-extensions: TemplateHaskell OverloadedStrings OverloadedRecordDot OverloadedLabels DuplicateRecordFields LambdaCase DerivingVia ImportQualifiedPost
+  ghc-options: -Wunused-imports -Wall -Wmissing-export-lists -Wmissing-home-modules -Widentities -Wpartial-fields -Wcpp-undef -Wno-orphans -fprint-potential-instances -threaded
+  build-depends:
+      QuickCheck
+    , aeson
+    , annotated-exception
+    , attoparsec
+    , base >=4.15
+    , bytestring
+    , cassava
+    , containers
+    , deepseq
+    , envparse
+    , exceptions
+    , generic-optics
+    , generic-random
+    , http-client
+    , http-media
+    , http-types
+    , katip
+    , mtl
+    , newtype-generics
+    , optics
+    , quickcheck-instances
+    , refined >=0.7
+    , relude >=1.1.0.0 && <1.2
+    , resourcet
+    , servant
+    , servant-client
+    , servant-server >=0.4.7.0
+    , some
+    , text
+    , vector
+    , wai
+    , warp
+  mixins:
+      base hiding (Prelude)
+    , relude (Relude as Prelude)
+  default-language: Haskell2010
+
+executable muscleup
+  main-is: Main.hs
+  other-modules:
+      Paths_muscleup
+  hs-source-dirs:
+      app
+  default-extensions: TemplateHaskell OverloadedStrings OverloadedRecordDot OverloadedLabels DuplicateRecordFields LambdaCase DerivingVia ImportQualifiedPost
+  ghc-options: -Wunused-imports -Wall -Wmissing-export-lists -Wmissing-home-modules -Widentities -Wpartial-fields -Wcpp-undef -Wno-orphans -fprint-potential-instances -threaded
+  build-depends:
+      QuickCheck
+    , aeson
+    , annotated-exception
+    , attoparsec
+    , base >=4.15
+    , bytestring
+    , cassava
+    , containers
+    , deepseq
+    , envparse
+    , exceptions
+    , generic-optics
+    , generic-random
+    , http-client
+    , http-media
+    , http-types
+    , katip
+    , mtl
+    , muscleup
+    , newtype-generics
+    , optics
+    , quickcheck-instances
+    , refined >=0.7
+    , relude >=1.1.0.0 && <1.2
+    , resourcet
+    , servant
+    , servant-client
+    , servant-server >=0.4.7.0
+    , some
+    , text
+    , vector
+    , wai
+    , warp
+  mixins:
+      base hiding (Prelude)
+    , relude (Relude as Prelude)
+  default-language: Haskell2010
