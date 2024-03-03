@@ -1,6 +1,6 @@
 cabal-version: 2.4
 
--- This file has been generated from package.yaml by hpack version 0.34.2.
+-- This file has been generated from package.yaml by hpack version 0.35.2.
 --
 -- see: https://github.com/sol/hpack
 
@@ -10,19 +10,36 @@ build-type:     Simple
 
 library
   exposed-modules:
+      App
+      Exercise
+      Html.Attribute
+      Html.Session
       Muscleup
+      Route.Root
+      ServantLucid
+      Server.RootServer
   other-modules:
+      Paths_muscleup
+  autogen-modules:
       Paths_muscleup
   hs-source-dirs:
       src
-  default-extensions: TemplateHaskell OverloadedStrings OverloadedRecordDot OverloadedLabels DuplicateRecordFields LambdaCase DerivingVia ImportQualifiedPost
+  default-extensions:
+      TemplateHaskell
+      OverloadedStrings
+      OverloadedRecordDot
+      OverloadedLabels
+      DuplicateRecordFields
+      LambdaCase
+      DerivingVia
+      ImportQualifiedPost
   ghc-options: -Wunused-imports -Wall -Wmissing-export-lists -Wmissing-home-modules -Widentities -Wpartial-fields -Wcpp-undef -Wno-orphans -fprint-potential-instances -threaded
   build-depends:
       QuickCheck
     , aeson
     , annotated-exception
     , attoparsec
-    , base >=4.15
+    , base
     , bytestring
     , cassava
     , containers
@@ -35,40 +52,54 @@ library
     , http-media
     , http-types
     , katip
+    , lucid2
     , mtl
     , newtype-generics
     , optics
     , quickcheck-instances
     , refined >=0.7
-    , relude >=1.1.0.0 && <1.2
+    , relude
     , resourcet
     , servant
     , servant-client
+    , servant-lucid
     , servant-server >=0.4.7.0
     , some
     , text
+    , time
+    , uuid
     , vector
     , wai
     , warp
   mixins:
       base hiding (Prelude)
     , relude (Relude as Prelude)
-  default-language: Haskell2010
+  default-language: GHC2021
 
 executable muscleup
   main-is: Main.hs
   other-modules:
       Paths_muscleup
+  autogen-modules:
+      Paths_muscleup
   hs-source-dirs:
       app
-  default-extensions: TemplateHaskell OverloadedStrings OverloadedRecordDot OverloadedLabels DuplicateRecordFields LambdaCase DerivingVia ImportQualifiedPost
+  default-extensions:
+      TemplateHaskell
+      OverloadedStrings
+      OverloadedRecordDot
+      OverloadedLabels
+      DuplicateRecordFields
+      LambdaCase
+      DerivingVia
+      ImportQualifiedPost
   ghc-options: -Wunused-imports -Wall -Wmissing-export-lists -Wmissing-home-modules -Widentities -Wpartial-fields -Wcpp-undef -Wno-orphans -fprint-potential-instances -threaded
   build-depends:
       QuickCheck
     , aeson
     , annotated-exception
     , attoparsec
-    , base >=4.15
+    , base
     , bytestring
     , cassava
     , containers
@@ -81,23 +112,27 @@ executable muscleup
     , http-media
     , http-types
     , katip
+    , lucid2
     , mtl
     , muscleup
     , newtype-generics
     , optics
     , quickcheck-instances
     , refined >=0.7
-    , relude >=1.1.0.0 && <1.2
+    , relude
     , resourcet
     , servant
     , servant-client
+    , servant-lucid
     , servant-server >=0.4.7.0
     , some
     , text
+    , time
+    , uuid
     , vector
     , wai
     , warp
   mixins:
       base hiding (Prelude)
     , relude (Relude as Prelude)
-  default-language: Haskell2010
+  default-language: GHC2021

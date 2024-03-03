@@ -1,0 +1,9 @@
+packages: *.cabal
+-- --tests: true
+-- --index-state: 2022-10-06T20:19:16Z
+-- optimization: 0
+--allow-newer:
+--   -- servant-server:base
+--   -- , servant-server:transformers
+--   -- , servant-server:http-api-data
+--   -- , http-api-data:base

@@ -31,11 +31,11 @@ ghc-options:
 
 dependencies:
   - name: base
-    version: ">=4.15"
+    #version: ">=4.15"
     mixin:
       - hiding (Prelude)
   - name: relude
-    version: "^>= 1.1.0.0"
+    #version: ">= 1.1.0.0"
     mixin:
       - (Relude as Prelude)
   - aeson
@@ -68,6 +68,10 @@ dependencies:
   - attoparsec
   - deepseq
   - generic-random
+  - lucid2
+  - servant-lucid
+  - uuid
+  - time
 
 library:
   source-dirs: src

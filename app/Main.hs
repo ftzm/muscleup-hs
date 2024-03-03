@@ -1,3 +1,8 @@
+{-# OPTIONS_GHC -Wno-missing-export-lists #-}
+
 module Main where
 
-main = putStrLn "run"
+import Muscleup (runApp)
+
+main :: IO ()
+main = runApp
